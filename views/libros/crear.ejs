@@ -1,0 +1,22 @@
+<%- include ../layouts/header.ejs %> 
+
+<div class="container mt-5">
+    <h1 class="text-center"><%= title %></h1>
+    <div class="row justify-content-center">
+        <div class="col-5">
+            <form method="POST" action="/libros">
+                <div class="mb-3">
+                <label for="Nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" name="nombre" id="nombre">
+                </div>
+                <div class="mb-3">
+                <label for="Apellido" class="form-label">Apellido</label>
+                <input type="text" class="form-control" name="Apellido" id="Apellido">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<%- include ../layouts/footer.ejs %> 

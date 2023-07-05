@@ -1,0 +1,28 @@
+<%- include ../layouts/header.ejs %> 
+
+<div class="container mt-5">
+    <h1><%= h1 %></h1>
+    <a href="/libros/crear" class="btn btn-primary">New user</a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Editar</th>
+                <th scope="col">Eliminar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for(let data = 0; data < getusers.length;  data++ ) { %> 
+            <tr>
+                <td><%= getusers[data].nombre %></td>
+                <td><%= getusers[data].Apellido %></td>
+                <td><button type="button" class="btn btn-info">Editar</button></td>
+                <td><button type="button" class="btn btn-danger">Eliminar</button></td>
+            </tr>
+            <% } %>
+        </tbody>
+    </table>
+</div>
+
+<%- include ../layouts/footer.ejs %> 
