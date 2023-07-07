@@ -17,8 +17,16 @@
             <tr>
                 <td><%= getusers[data].nombre %></td>
                 <td><%= getusers[data].Apellido %></td>
-                <td><button type="button" class="btn btn-info">Editar</button></td>
-                <td><button type="button" class="btn btn-danger">Eliminar</button></td>
+                <td>
+                    <form action="/libros/editar/<%= getusers[data].id_coordinador %>" method="post">
+                        <button type="submit" class="btn btn-info">Editar</button>
+                    </form>
+                </td>
+                <td>
+                    <form action="/libros/eliminar/<%= getusers[data].id_coordinador %>" method="post">
+                        <button type="submit" class="btn btn-danger">Eliminar</button>
+                    </form>
+                </td>
             </tr>
             <% } %>
         </tbody>

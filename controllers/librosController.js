@@ -17,5 +17,23 @@ module.exports={
         getusers.insert(link, req.body, function (err){
             res.redirect('/libros')
         })
-    }
+    },
+    delete:function (req, res) {
+        // console.log("id"+ req.params.id);
+        getusers.eliminar(link,req.params.id, function (err){
+            res.redirect('/libros')
+        })
+    },
+    editar:function (req, res) {
+        getusers.returndata(link, req.params.id, function (err, registros) {
+            // console.log(registros[0]);
+            res.render('libros/editar',{title: "Editar", getusers:registros[0]})            
+        })
+    },
+    actuaizar:function (req, res) {
+        // console.log(req.body)
+        getusers.update(link, req.body, function (err){
+            res.redirect('/libros')
+        })
+    },
 }
