@@ -9,7 +9,7 @@ let link = mysql.createConnection({
 link.connect(
     (err) =>{
         if (!err) {
-            // console.log('conecxion establecida');
+            console.log('conecxion establecida en el puerto 3000');
         } else {
             console.log('Error en la conexion');
         }
